@@ -1,0 +1,5 @@
+infol:
+  class: Directory
+  path: "./data/test-ptrc_ptr/ptrc_ca_out"
+out: "ptrc_ptr_out.csv"
+csv_output: true

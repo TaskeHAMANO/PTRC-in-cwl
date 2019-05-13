@@ -1,0 +1,31 @@
+- doc: "Test for database build"
+  job: "./test-ptrc_db-job.yml"
+  tool: "../ptrc_db.cwl"
+  should_fail: false
+  output:
+    output_db:
+        - class: File
+          location: "ptrc_db_out.gem"
+        - class: File
+          location: "ptrc_db_out.pk"
+  
+- doc: "Test for coverage analysis"
+  job: "./test-ptrc_ca-job.yml"
+  tool: "../ptrc_ca.cwl"
+  should_fail: false
+  output:
+    output_dir:
+      class: Directory
+      location: "ptrc_ca_out"
+      listing:
+        - class: File
+          location: "ERR969426.ptr"
+
+- doc: "Test for PTR"
+  job: "./test-ptrc_ptr-job.yml"
+  tool: "../ptrc_ptr.cwl"
+  should_fail: false
+  output:
+    output_file:
+      class: File
+      location: "ptrc_ptr_out.csv"

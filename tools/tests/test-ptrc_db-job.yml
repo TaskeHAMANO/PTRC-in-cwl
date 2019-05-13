@@ -1,0 +1,7 @@
+metadata:
+  class: File
+  path: "./data/test-ptrc_db/metadata.tsv"
+fasta:
+  class: File
+  path: "./data/test-ptrc_db/sequence.fasta"
+out: "./ptrc_db_out"
