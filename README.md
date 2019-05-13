@@ -48,5 +48,5 @@ cwl-runner --outdir ${PATH_TO_OUTPUT_DIR} \
 
 ## Reference
 
-Original PTRC inplementation was published from [(Korem et al., Science, 2015)].
-And this implementation was part of ([Suzuki et al., Submitted]).
+Original PTRC inplementation was published from [(Korem et al., Science, 2015)](http://doi.org/10.1126/science.aac4812).
+And this implementation was part of [Suzuki et al., Submitted]().
