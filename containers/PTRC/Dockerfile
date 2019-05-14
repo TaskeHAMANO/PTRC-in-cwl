@@ -5,7 +5,7 @@ LABEL description="Container for PTRC"
 
 ENV TOOLDIR /opt
 # Unarchive PTRC
-ADD PTRC1.1.2.tar.gz ${TOOLDIR}
+ADD ./PTRC1.1.2.tar.gz ${TOOLDIR}
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends wget \
