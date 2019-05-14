@@ -5,7 +5,8 @@ class: CommandLineTool
 baseCommand: ["PTR"]
 hints:
     DockerRequirement:
-        dockerImageId: ajhjhaf/ptrc
+        dockerPull: ajhjhaf/ptrc:1.1.2
+        dockerImageId: ajhjhaf/ptrc:1.1.2
         dockerFile:
             $include: ../containers/PTRC/Dockerfile
 inputs:
