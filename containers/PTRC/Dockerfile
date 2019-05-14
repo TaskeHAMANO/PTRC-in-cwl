@@ -4,6 +4,8 @@ LABEL maintainer="Shinya Suzuki<sshinya@bio.titech.ac.jp>"
 LABEL description="Container for PTRC"
 
 ENV TOOLDIR /opt
+# Unarchive PTRC
+ADD PTRC1.1.2.tar.gz ${TOOLDIR}
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends wget \
@@ -35,9 +37,6 @@ RUN pip install setuptools wheel && \
                 # No description in README, but below libraries are required.
                 scipy==0.15.1 \
                 biopython==1.65
-
-# Unarchive PTRC
-ADD PTRC1.1.2.tar.gz ${TOOLDIR}
 
 # Directory to mount index file
 RUN mkdir PTRC_INDEX
