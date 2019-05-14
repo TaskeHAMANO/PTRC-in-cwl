@@ -25,7 +25,11 @@ inputs:
         inputBinding:
             position: 3
             prefix: "-out"
-
+    cov_thresh:
+        type: float?
+        inputBinding:
+            position: 4
+            prefix: "-cov_thresh"
 outputs:
     "output_db":
         type: File[]
