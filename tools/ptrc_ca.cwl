@@ -51,6 +51,11 @@ inputs:
         type: Directory
     "db_name":
         type: string
+    "cov_thresh": 
+        type: float?
+        inputBinding:
+            position: 9
+            prefix: "-cov_thresh"
 arguments:
     - prefix: "-db_path_name"
       position: 8
