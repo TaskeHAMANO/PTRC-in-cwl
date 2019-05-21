@@ -10,3 +10,4 @@ db_dir_path:
   path: "./data/test-ptrc_pipeline_se"
 db_name: test
 cov_thresh: 0
+out: "test_output.tsv"

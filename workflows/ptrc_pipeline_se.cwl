@@ -11,6 +11,7 @@ inputs:
     db_dir_path: Directory
     db_name: string
     cov_thresh: float?
+    out: string?
 steps:
     ptrc_ca:
         run: "../tools/ptrc_ca.cwl"
@@ -38,6 +39,7 @@ steps:
             db_name: db_name
             csv_output: {"default": true}
             cov_thresh: cov_thresh
+            out: out
         out:
             - output_file
 
