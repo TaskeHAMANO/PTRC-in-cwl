@@ -23,6 +23,7 @@ steps:
         in:
             i1: i1
             i2: i2
+            pe: {"default": true}
             db_dir_path: db_dir_path
             db_name: db_name
             cov_thresh: cov_thresh
