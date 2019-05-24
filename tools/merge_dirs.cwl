@@ -13,11 +13,13 @@ hints:
 inputs:
     "dirs":
         type: Directory[]
+    "dirs_additional":
+        type: Directory[]?
     "outdir":
         type: string
         default: "merge_dirs_out"
         inputBinding:
-            position: 2
+            position: 3
     
 arguments:
     - position: 1
@@ -27,6 +29,14 @@ arguments:
                 return x["path"] + "/" ;
             }
             return inputs.dirs.map(add_slash) ;
+        }
+    - position: 2
+      valueFrom: |
+        ${
+            function add_slash(x){
+                return x["path"] + "/" ;
+            }
+            return inputs.dirs_additional.map(add_slash) ;
         }
 outputs:
     "output_dir":

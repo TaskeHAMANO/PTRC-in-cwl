@@ -7,6 +7,7 @@ requirements:
     ScatterFeatureRequirement: {}
 
 inputs:
+    i: File[]
     i1: File[]
     i2: File[]
     db_dir_path: Directory
@@ -14,7 +15,19 @@ inputs:
     cov_thresh: float?
     out: string?
 steps:
-    ptrc_ca:
+    ptrc_ca_se:
+        run: "../tools/ptrc_ca.cwl"
+        scatter:
+            - i1
+        scatterMethod: dotproduct
+        in:
+            i1: i
+            db_dir_path: db_dir_path
+            db_name: db_name
+            cov_thresh: cov_thresh
+        out:
+            - output_dir
+    ptrc_ca_pe:
         run: "../tools/ptrc_ca.cwl"
         scatter:
             - i1
@@ -32,7 +45,8 @@ steps:
     merge_dirs:
         run: "../tools/merge_dirs.cwl"
         in:
-            dirs: ptrc_ca/output_dir
+            dirs: ptrc_ca_se/output_dir
+            dirs_additional: ptrc_ca_pe/output_dir
         out:
             - output_dir
     ptrc_ptr:
