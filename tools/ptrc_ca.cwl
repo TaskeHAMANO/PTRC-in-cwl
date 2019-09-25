@@ -5,6 +5,12 @@ class: CommandLineTool
 baseCommand: ["CA"]
 requirements:
     InlineJavascriptRequirement: {}
+    InitialWorkDirRequirement:
+        listing:
+          - entry: $(inputs.i1)
+            writable: true
+          - entry: $(inputs.i2)
+            writable: true
 hints:
     DockerRequirement:
         dockerPull: ajhjhaf/ptrc:1.1.2
