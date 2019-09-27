@@ -6,4 +6,4 @@ map: "ERR969426.map"
 db_dir_path: 
   class: Directory
   path: "./data/test-ptrc_ca"
-db_name: "test"
+db_name: "lg"

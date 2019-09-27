@@ -1,0 +1,13 @@
+i1:
+  class: File
+  path: "./data/test-ptrc_ca/ERR969331_1.fastq"
+i2:
+  class: File
+  path: "./data/test-ptrc_ca/ERR969331_2.fastq"
+outfol: "ptrc_ca_out"
+pe: true
+map: "ERR969426.map"
+db_dir_path: 
+  class: Directory
+  path: "./data/test-ptrc_ca"
+db_name: "ec"
