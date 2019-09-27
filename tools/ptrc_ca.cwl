@@ -2,7 +2,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: ["CA"]
+baseCommand: ["python", "/opt/PTRC1.1/PTRC.py", "CA"]
 requirements:
     InlineJavascriptRequirement: {}
     InitialWorkDirRequirement:

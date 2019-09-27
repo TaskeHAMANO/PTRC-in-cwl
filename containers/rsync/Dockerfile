@@ -7,5 +7,4 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends rsync && \
     rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["rsync"]
-CMD ["--help"]
+CMD ["rsync", "--help"]

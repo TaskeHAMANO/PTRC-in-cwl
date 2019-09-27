@@ -44,5 +44,4 @@ VOLUME ${TOOLDIR}/PTRC_INDEX
 ENV PATH ${PATH}:${TOOLDIR}/PTRC_INDEX
 
 WORKDIR ${TOOLDIR}/PTRC1.1
-ENTRYPOINT ["python", "/opt/PTRC1.1/PTRC.py"]
-CMD ["--help"]
+CMD ["python", "/opt/PTRC1.1/PTRC.py", "--help"]

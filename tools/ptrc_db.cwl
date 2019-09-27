@@ -2,7 +2,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: ["DB"]
+baseCommand: ["python", "/opt/PTRC1.1/PTRC.py", "DB"]
 hints:
     DockerRequirement:
         dockerPull: ajhjhaf/ptrc:1.1.2

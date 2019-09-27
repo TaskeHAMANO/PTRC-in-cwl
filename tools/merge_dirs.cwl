@@ -2,7 +2,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: ["-a"]
+baseCommand: ["rsync", "-a"]
 requirements:
     InlineJavascriptRequirement: {}
 hints:
